@@ -36,9 +36,9 @@ const mixColors = colorsArray => {
   return `#${convertDecimalToHex(r)}${convertDecimalToHex(g)}${convertDecimalToHex(b)}`;
 };
 
-module.exports = postcss.plugin('postcss-color-mixer', () => root => {
+module.exports = postcss.plugin('postcss-color-blender', () => root => {
   root.walkDecls(decl => {
-    if (decl.prop === 'color-mixer') {
+    if (decl.prop === 'color-blender') {
       const mixedColor = mixColors(decl.value.replace(/\s+/g, '').split(','));
 
       decl.prop = 'background-color';

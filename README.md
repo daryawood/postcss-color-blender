@@ -1,4 +1,4 @@
-# PostCSS Color Mixer
+# PostCSS Color Blender
 
 [PostCSS] plugin to mix hex colors and set it to the background-color property.
 
@@ -14,11 +14,11 @@ npm intall postcss-color-blender --save-dev
 
 ```css
 .foo {
-    color-mixer: #111, #666666;
+  color-blender: #111, #666666;
 }
 
 .bar {
-  color-mixer: #00ffff, #3c3c3c, #125678, #fadafa;
+  color-blender: #00ffff, #3c3c3c, #125678, #fadafa;
 }
 ```
 
@@ -35,7 +35,7 @@ npm intall postcss-color-blender --save-dev
 ## Usage
 
 ```js
-postcss([ require('postcss-color-mixer') ])
+postcss([ require('postcss-color-blender') ])
 ```
 
 See [PostCSS] docs for examples for your environment.
