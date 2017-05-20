@@ -1,0 +1,54 @@
+{
+  "name": "postcss-color-blender",
+  "version": "1.0.0",
+  "description": "PostCSS plugin to blend hex colors",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "color mixer",
+    "color blender",
+    "mix hex colors",
+    "blend hex colors"
+  ],
+  "author": "DaryaVeretennikova <darya0veretennikova@gmail.com>",
+  "license": "MIT",
+  "repository": "DaryaVeretennikova/postcss-color-blender",
+  "bugs": {
+    "url": "https://github.com/DaryaVeretennikova/postcss-color-blender/issues"
+  },
+  "homepage": "https://github.com/DaryaVeretennikova/postcss-color-blender",
+  "main": "dist/postcss-color-blender.js",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "postcss": "^6.0.1"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.5.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.2.0",
+    "jest": "^20.0.0",
+    "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest && eslint *.js"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": 4
+          },
+          "modules": false
+        }
+      ]
+    ]
+  }
+}

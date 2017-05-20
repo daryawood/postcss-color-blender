@@ -1,0 +1,11 @@
+{
+  "extends": "eslint-config-airbnb-base",
+  "env": {
+    "jest": true,
+    "es6": true
+  },
+  "rules": {
+    "arrow-parens": ["error", "as-needed"],
+    "no-param-reassign": 0
+  }
+}
