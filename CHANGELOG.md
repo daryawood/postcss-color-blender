@@ -7,3 +7,7 @@
 ## 1.0.1
 
 * Fixed naming
+
+## 1.1.0
+
+* Add rgb and rgba support

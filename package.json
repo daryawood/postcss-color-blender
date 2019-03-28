@@ -1,23 +1,23 @@
 {
   "name": "postcss-color-blender",
-  "version": "1.0.1",
-  "description": "PostCSS plugin to blend hex colors",
+  "version": "1.1.0",
+  "description": "PostCSS plugin to blend colors",
   "keywords": [
     "postcss",
     "css",
     "postcss-plugin",
     "color mixer",
     "color blender",
-    "mix hex colors",
-    "blend hex colors"
+    "mix colors",
+    "blend colors"
   ],
-  "author": "DaryaVeretennikova <darya0veretennikova@gmail.com>",
+  "author": "Darya Veretennikova <darya0veretennikova@gmail.com>",
   "license": "MIT",
-  "repository": "DaryaVeretennikova/postcss-color-blender",
+  "repository": "daryawood/postcss-color-blender",
   "bugs": {
-    "url": "https://github.com/DaryaVeretennikova/postcss-color-blender/issues"
+    "url": "https://github.com/daryawood/postcss-color-blender/issues"
   },
-  "homepage": "https://github.com/DaryaVeretennikova/postcss-color-blender",
+  "homepage": "https://github.com/daryawood/postcss-color-blender",
   "main": "dist/postcss-color-blender.js",
   "files": [
     "dist"
@@ -36,7 +36,8 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "test": "jest && eslint *.js"
+    "jest": "jest src/__test__/*.test.js",
+    "test": "jest && eslint src/*.js"
   },
   "babel": {
     "presets": [

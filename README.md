@@ -1,6 +1,6 @@
 # PostCSS Color Blender
 
-[PostCSS] plugin to mix hex colors and set it to the background-color property.
+[PostCSS] plugin to mix hex, rgba and rgba colors and set it to the background-color property.
 
 [PostCSS]: https://github.com/postcss/postcss
 
@@ -11,6 +11,8 @@ npm intall postcss-color-blender --save-dev
 ```
 
 ## Examples
+
+### Hex
 
 ```css
 .foo {
@@ -29,6 +31,34 @@ npm intall postcss-color-blender --save-dev
 
 .bar {
   background-color: #529bab;
+}
+```
+
+### Rgb
+
+```css
+.foo42 {
+  color-blender: rgb(0, 0, 0), rgb(255, 255, 255);
+}
+```
+
+```css
+.foo42 {
+  background-color: #808000;
+}
+```
+
+### Rgba
+
+```css
+.bar42 {
+  color-blender: rgba(0, 0, 0, .1), rgb(255, 255, 255, 1);
+}
+```
+
+```css
+.bar42 {
+  background-color: #808000;
 }
 ```
 
