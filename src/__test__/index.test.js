@@ -7,6 +7,7 @@ const test = (input, output) => postcss([plugin]).process(input)
     expect(result.warnings().length).toBe(0);
   })
   .catch(err => {
+    console.error(err);
     return err;
   });
 

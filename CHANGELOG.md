@@ -11,3 +11,8 @@
 ## 1.1.0
 
 * Add rgb and rgba support
+
+## 1.2.0
+
+* Simplify regexp
+* Update deps

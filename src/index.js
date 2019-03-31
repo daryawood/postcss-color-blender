@@ -1,17 +1,21 @@
 const postcss = require('postcss');
 
-const hexThreeRegex = /#([a-f\d]{1})([a-f\d]{1})([a-f\d]{1})/i;
-const hexThreeRegexG = /#([a-f\d]{1})([a-f\d]{1})([a-f\d]{1})/ig;
 
-const hexSixRegex = /#([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})/i;
-const hexSixRegexG = /#([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})/ig;
+const hexThreeString = '#([a-f\\d]{1})([a-f\\d]{1})([a-f\\d]{1})';
+const hexThreeRegex = new RegExp(hexThreeString, 'i');
+const hexThreeRegexG = new RegExp(hexThreeString, 'ig');
 
-const rgbRegex = /[rR][gG][bB]\((\d*,?\s?)(\d*,?\s?)(\d*,?\s?)\)/;
-const rgbRegexG = /[rR][gG][bB]\((\d*,?\s?)(\d*,?\s?)(\d*,?\s?)\)/g;
+const hexSixString = '#([a-f\\d]{2})([a-f\\d]{2})([a-f\\d]{2})';
+const hexSixRegex = new RegExp(hexSixString, 'i');
+const hexSixRegexG = new RegExp(hexSixString, 'ig');
 
-const rgbaRegex = /[rR][gG][bB][aA]\((\d*,?\s?)(\d*,?\s?)(\d*,?\s?)(\d?.?\d?)\)/;
-const rgbaRegexG = /[rR][gG][bB][aA]\((\d*,?\s?)(\d*,?\s?)(\d*,?\s?)(\d?.?\d?)\)/g;
+const rgbString = '[rR][gG][bB]\\((\\d*,?\\s?)(\\d*,?\\s?)(\\d*,?\\s?)\\)';
+const rgbRegex = new RegExp(rgbString);
+const rgbRegexG = new RegExp(rgbString, 'g');
 
+const rgbaString = '[rR][gG][bB][aA]\\((\\d*,?\\s?)(\\d*,?\\s?)(\\d*,?\\s?)(\\d?.?\\d?)\\)';
+const rgbaRegex = new RegExp(rgbaString);
+const rgbaRegexG = new RegExp(rgbaString, 'g');
 
 const convertDecimalToHex = decimalValue => (decimalValue < 10 ? `0${decimalValue}` : decimalValue.toString(16));
 const intToHex = int => convertDecimalToHex(parseInt(int, 10));

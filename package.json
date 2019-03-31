@@ -1,6 +1,6 @@
 {
   "name": "postcss-color-blender",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "PostCSS plugin to blend colors",
   "keywords": [
     "postcss",
@@ -26,23 +26,26 @@
     "postcss": "^6.0.1"
   },
   "devDependencies": {
-    "babel-preset-env": "^1.5.0",
+    "@babel/core": "7.4.0",
+    "@babel/preset-env": "7.4.2",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.2.0",
-    "jest": "^20.0.0",
-    "rollup": "^0.41.6",
-    "rollup-plugin-babel": "^2.7.1"
+    "jest": "24.5.0",
+    "rollup": "1.7.4",
+    "rollup-plugin-babel": "4.3.2",
+    "rollup-plugin-terser": "4.0.4"
   },
   "scripts": {
     "build": "rollup -c",
     "jest": "jest src/__test__/*.test.js",
-    "test": "jest && eslint src/*.js"
+    "test": "jest && eslint src/*.js",
+    "prepublishOnly": "npm run build"
   },
   "babel": {
     "presets": [
       [
-        "env",
+        "@babel/preset-env",
         {
           "targets": {
             "node": 4

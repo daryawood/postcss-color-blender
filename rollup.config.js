@@ -1,13 +1,17 @@
 import babel from 'rollup-plugin-babel';
+import { terser } from 'rollup-plugin-terser';
 
 const pkg = require('./package.json');
 
 export default {
-  entry: './src/index.js',
+  input: './src/index.js',
+  output: {
+    format: 'cjs',
+    file: pkg.main,
+  },
   plugins: [
     babel(),
+    terser(),
   ],
   external: Object.keys(pkg.dependencies).concat(['path', 'fs']),
-  format: 'cjs',
-  dest: pkg.main,
 };
